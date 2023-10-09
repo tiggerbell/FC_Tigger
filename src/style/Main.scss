@@ -7,8 +7,69 @@
 }
 
 .score_container {
-  width: 750px;
-  height: 160px;
-  background-color: bisque;
-  border-radius: 15px;
+  width: 1080px;
+  height: 566px;
+  background-image: linear-gradient(270deg, #6856e9, #a839fd, #da315a);
+  .container__first-dan {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    align-items: center;
+    background-image: url(https://ssl.pstatic.net/static/sports/2023/m/08/18/hangzhou_scoreboard_bg.png);
+    .first-dan__left,
+    .first-dan__right {
+      width: 360px;
+      text-align: center;
+      .left__team-name {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 36px;
+      }
+    }
+    .first-dan__center {
+      width: 360px;
+      .center__score-box {
+        display: flex;
+        justify-content: space-between;
+        .score-box__home-score,
+        .score-box__away-score {
+          font-size: 64px;
+          font-weight: 700;
+          line-height: 1;
+        }
+      }
+      .center__date {
+        text-align: center;
+        font-weight: 300;
+        font-size: 24px;
+      }
+      .center__place {
+        text-align: center;
+        font-size: 18px;
+        color: #ffbde5;
+      }
+    }
+  }
+  .container__secon-dan {
+    display: flex;
+    .secon-dan__home:first-child {
+      border-right: 1px solid rgba(0, 0, 0, 0.08);
+      flex-direction: column;
+      text-align: right;
+      padding: 7px;
+    }
+    .secon-dan__home,
+    .secon-dan__away {
+      width: 540px;
+      height: 366px;
+      display: flex;
+      .home__member {
+        margin-bottom: 3px;
+        font-size: 24px;
+      }
+      .blur {
+        opacity: 0.5;
+      }
+    }
+  }
 }
