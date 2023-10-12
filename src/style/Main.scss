@@ -53,7 +53,7 @@
   .container__secon-dan {
     display: flex;
     .secon-dan__home:first-child {
-      border-right: 1px solid rgba(0, 0, 0, 0.08);
+      border-right: 3px solid rgba(0, 0, 0, 0.08);
       flex-direction: column;
       text-align: right;
       padding: 7px;
@@ -63,9 +63,24 @@
       width: 540px;
       height: 366px;
       display: flex;
-      .home__member {
+      .home__player-box {
         margin-bottom: 3px;
-        font-size: 24px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: end;
+        .player-box__member {
+          font-size: 24px;
+        }
+        .player-box__text {
+          font-size: 20px;
+          margin-right: 4px;
+          line-height: 1;
+        }
+        .player-box__assist,
+        .player-box__goal {
+          margin-right: 4px;
+        }
       }
       .blur {
         opacity: 0.5;
