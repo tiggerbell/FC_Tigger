@@ -61,7 +61,7 @@
     .secon-dan__home,
     .secon-dan__away {
       width: 540px;
-      height: 366px;
+      height: 331px;
       display: flex;
       .home__player-box {
         margin-bottom: 3px;
@@ -84,6 +84,28 @@
       }
       .blur {
         opacity: 0.5;
+      }
+    }
+  }
+
+  .container__third-dan {
+    border-top: 3px solid rgba(0, 0, 0, 0.08);
+    .third-dan__home:first-child {
+      height: 32px;
+      border-right: 3px solid rgba(0, 0, 0, 0.08);
+    }
+    .third-dan__home,
+    .third-dan__away {
+      width: 540px;
+      display: flex;
+      justify-content: end;
+      .score-text {
+        font-size: 20px;
+        margin-right: 4px;
+      }
+      .team-assist,
+      .team-goal {
+        margin-right: 4px;
       }
     }
   }
