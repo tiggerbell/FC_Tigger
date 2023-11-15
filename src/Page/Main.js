@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/Main.scss";
 import assist from "../assets/images/assist.svg";
 import goal from "../assets/images/goal.svg";
 
 const Main = () => {
+  const [homeTotal, setHomeTotal] = useState(0);
+  const calculateTotalGoalHome = () => {
+    const player1 = 2;
+    const player2 = 3;
+    const player3 = 5;
+    const player4 = 5;
+    const player5 = 5;
+    const player6 = 5;
+
+    // 입력한 값들을 합산
+    const sum = player1 + player2 + player3 + player4 + player5 + player6;
+
+    // 합산 결과를 상태 변수에 설정
+    setHomeTotal(sum);
+  };
+
   return (
     <div className="main">
       <div className="score_container">
@@ -247,7 +263,9 @@ const Main = () => {
         {/* 3열 총 득점, 어시스트 정보 */}
         <div className="container__third-dan">
           <div className="third-dan__home">
-            <span className="score-text">9</span>
+            <span className="score-text" onChange={calculateTotalGoalHome}>
+              {homeTotal}
+            </span>
             <img className="team-goal" src={goal} alt="icon" width={24} />
             <span className="score-text">6</span>
             <img className="team-assist" src={assist} alt="icon" width={24} />
