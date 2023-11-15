@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../style/Main.scss";
 import assist from "../assets/images/assist.svg";
 import goal from "../assets/images/goal.svg";
@@ -7,19 +7,56 @@ const Main = () => {
   const [homeTotalGoal, setHomeTotalGoal] = useState(0);
   const [homeTotalAssist, setHomeTotalAssist] = useState(0);
 
-  const homePlayer1 = [0, 1]; // 고동혁
-  const homePlayer2 = [0, 1]; // 김수겸
-  const homePlayer3 = [0, 1]; // 김민규
-  const homePlayer4 = [0, 1]; // 김원형
-  const homePlayer5 = [0, 1]; // 김종찬
-  const homePlayer6 = [0, 1]; // 민경준
-  const homePlayer7 = [0, 1]; // 나상우
-  const homePlayer8 = [0, 1]; // 박남주
-  const homePlayer9 = [0, 1]; // 박한규
-  const homePlayer10 = [0, 1]; // 안주영
-  const homePlayer11 = [0, 1]; // 이병찬
-  const homePlayer12 = [0, 1]; // 이준민
-  const homePlayer13 = [0, 1]; // 임영훈
+  // 배열 첫번째 골, 두번째 어시
+  const homePlayer1 = [1, 0]; // 고동혁
+  const homePlayer2 = [2, 1]; // 김수겸
+  const homePlayer3 = [3, 2]; // 김민규
+  const homePlayer4 = [0, 0]; // 김원형
+  const homePlayer5 = [0, 0]; // 김종찬
+  const homePlayer6 = [4, 0]; // 민경준
+  const homePlayer7 = [0, 0]; // 나상우
+  const homePlayer8 = [0, 0]; // 박남주
+  const homePlayer9 = [0, 0]; // 박한규
+  const homePlayer10 = [0, 0]; // 안주영
+  const homePlayer11 = [0, 0]; // 이병찬
+  const homePlayer12 = [0, 0]; // 임영훈
+
+  // 홈 팀 골 합
+  useEffect(() => {
+    const homeGoalSum = [
+      homePlayer1, // 고동혁
+      homePlayer2, // 김수겸
+      homePlayer3, // 김민규
+      homePlayer4, // 김원형
+      homePlayer5, // 김종찬
+      homePlayer6, // 민경준
+      homePlayer7, // 나상우
+      homePlayer8, // 박남주
+      homePlayer9, // 박한규
+      homePlayer10, // 안주영
+      homePlayer11, // 이병찬
+      homePlayer12, // 임영훈
+    ].reduce((total, player) => total + player[0], 0);
+
+    setHomeTotalGoal(homeGoalSum);
+
+    const homeAssistSum = [
+      homePlayer1, // 고동혁
+      homePlayer2, // 김수겸
+      homePlayer3, // 김민규
+      homePlayer4, // 김원형
+      homePlayer5, // 김종찬
+      homePlayer6, // 민경준
+      homePlayer7, // 나상우
+      homePlayer8, // 박남주
+      homePlayer9, // 박한규
+      homePlayer10, // 안주영
+      homePlayer11, // 이병찬
+      homePlayer12, // 임영훈
+    ].reduce((total, player) => total + player[1], 0);
+
+    setHomeTotalAssist(homeAssistSum);
+  }, []);
 
   return (
     <div className="main">
@@ -48,14 +85,14 @@ const Main = () => {
         <div className="container__secon-dan">
           <div className="secon-dan__home">
             <div className="home__player-box">
-              <span className="player-box__text">5</span>
+              <span className="player-box__text">{homePlayer1[0]}</span>
               <img
                 className="player-box__goal"
                 src={goal}
                 alt="icon"
                 width={24}
               />
-              <span className="player-box__text">1</span>
+              <span className="player-box__text">{homePlayer1[1]}</span>
               <img
                 className="player-box__assist"
                 src={assist}
@@ -64,15 +101,16 @@ const Main = () => {
               />
               <span className="player-box__member">고동혁</span>
             </div>
-            <div className="home__player-box">
-              <span className="player-box__text">1</span>
+
+            {/* <div className="home__player-box">
+              <span className="player-box__text">{homePlayer2[0]}</span>
               <img
                 className="player-box__goal"
                 src={goal}
                 alt="icon"
                 width={24}
               />
-              <span className="player-box__text">1</span>
+              <span className="player-box__text">{homePlayer2[1]}</span>
               <img
                 className="player-box__assist"
                 src={assist}
@@ -80,16 +118,17 @@ const Main = () => {
                 width={24}
               />
               <span className="player-box__member">김수겸</span>
-            </div>
+            </div> */}
+
             {/* <div className="home__player-box">
-              <span className="player-box__text">2</span>
+              <span className="player-box__text">{homePlayer3[0]}</span>
               <img
                 className="player-box__goal"
                 src={goal}
                 alt="icon"
                 width={24}
               />
-              <span className="player-box__text">1</span>
+              <span className="player-box__text">{homePlayer3[1]}</span>
               <img
                 className="player-box__assist"
                 src={assist}
@@ -98,15 +137,16 @@ const Main = () => {
               />
               <span className="player-box__member">김민규</span>
             </div> */}
-            {/* <div className="home__player-box">
-              <span className="player-box__text">2</span>
+
+            <div className="home__player-box">
+              <span className="player-box__text">{homePlayer4[0]}</span>
               <img
                 className="player-box__goal"
                 src={goal}
                 alt="icon"
                 width={24}
               />
-              <span className="player-box__text">1</span>
+              <span className="player-box__text">{homePlayer4[1]}</span>
               <img
                 className="player-box__assist"
                 src={assist}
@@ -114,16 +154,17 @@ const Main = () => {
                 width={24}
               />
               <span className="player-box__member">김원형</span>
-            </div> */}
-            {/* <div className="home__player-box">
-              <span className="player-box__text">1</span>
+            </div>
+
+            <div className="home__player-box">
+              <span className="player-box__text">{homePlayer5[0]}</span>
               <img
                 className="player-box__goal"
                 src={goal}
                 alt="icon"
                 width={24}
               />
-              <span className="player-box__text">2</span>
+              <span className="player-box__text">{homePlayer5[1]}</span>
               <img
                 className="player-box__assist"
                 src={assist}
@@ -131,16 +172,17 @@ const Main = () => {
                 width={24}
               />
               <span className="player-box__member">김종찬</span>
-            </div> */}
+            </div>
+
             {/* <div className="home__player-box">
-              <span className="player-box__text">5</span>
+              <span className="player-box__text">{homePlayer6[0]}</span>
               <img
                 className="player-box__goal"
                 src={goal}
                 alt="icon"
                 width={24}
               />
-              <span className="player-box__text">2</span>
+              <span className="player-box__text">{homePlayer6[1]}</span>
               <img
                 className="player-box__assist"
                 src={assist}
@@ -149,8 +191,16 @@ const Main = () => {
               />
               <span className="player-box__member">민경준</span>
             </div> */}
-            {/* <div className="home__player-box">
-              <span className="player-box__text">1</span>
+
+            <div className="home__player-box">
+              <span className="player-box__text">{homePlayer7[0]}</span>
+              <img
+                className="player-box__goal"
+                src={goal}
+                alt="icon"
+                width={24}
+              />
+              <span className="player-box__text">{homePlayer7[1]}</span>
               <img
                 className="player-box__assist"
                 src={assist}
@@ -159,15 +209,16 @@ const Main = () => {
               />
               <span className="player-box__member">나상우</span>
             </div>
+
             <div className="home__player-box">
-              <span className="player-box__text">3</span>
+              <span className="player-box__text">{homePlayer8[0]}</span>
               <img
                 className="player-box__goal"
                 src={goal}
                 alt="icon"
                 width={24}
               />
-              <span className="player-box__text">1</span>
+              <span className="player-box__text">{homePlayer8[1]}</span>
               <img
                 className="player-box__assist"
                 src={assist}
@@ -176,15 +227,16 @@ const Main = () => {
               />
               <span className="player-box__member">박남주</span>
             </div>
-            <div className="home__player-box">
-              <span className="player-box__text">1</span>
+
+            {/* <div className="home__player-box">
+              <span className="player-box__text">{homePlayer9[0]}</span>
               <img
                 className="player-box__goal"
                 src={goal}
                 alt="icon"
                 width={24}
               />
-              <span className="player-box__text">2</span>
+              <span className="player-box__text">{homePlayer9[1]}</span>
               <img
                 className="player-box__assist"
                 src={assist}
@@ -194,15 +246,15 @@ const Main = () => {
               <span className="player-box__member">박한규</span>
             </div> */}
 
-            {/* <div className="home__player-box">
-              <span className="player-box__text">2</span>
+            <div className="home__player-box">
+              <span className="player-box__text">{homePlayer10[0]}</span>
               <img
                 className="player-box__goal"
                 src={goal}
                 alt="icon"
                 width={24}
               />
-              <span className="player-box__text">3</span>
+              <span className="player-box__text">{homePlayer10[1]}</span>
               <img
                 className="player-box__assist"
                 src={assist}
@@ -210,16 +262,17 @@ const Main = () => {
                 width={24}
               />
               <span className="player-box__member">안주영</span>
-            </div> */}
-            {/* <div className="home__player-box">
-              <span className="player-box__text">6</span>
+            </div>
+
+            <div className="home__player-box">
+              <span className="player-box__text">{homePlayer11[0]}</span>
               <img
                 className="player-box__goal"
                 src={goal}
                 alt="icon"
                 width={24}
               />
-              <span className="player-box__text">3</span>
+              <span className="player-box__text">{homePlayer11[1]}</span>
               <img
                 className="player-box__assist"
                 src={assist}
@@ -227,27 +280,17 @@ const Main = () => {
                 width={24}
               />
               <span className="player-box__member">이병찬</span>
-            </div> */}
+            </div>
 
-            {/* <div className="home__player-box">
-              <span className="player-box__text">1</span>
+            <div className="home__player-box">
+              <span className="player-box__text">{homePlayer12[0]}</span>
               <img
                 className="player-box__goal"
                 src={goal}
                 alt="icon"
                 width={24}
               />
-              <span className="player-box__member">이준민</span>
-            </div> */}
-            {/* <div className="home__player-box">
-              <span className="player-box__text">3</span>
-              <img
-                className="player-box__goal"
-                src={goal}
-                alt="icon"
-                width={24}
-              />
-              <span className="player-box__text">4</span>
+              <span className="player-box__text">{homePlayer12[1]}</span>
               <img
                 className="player-box__assist"
                 src={assist}
@@ -255,7 +298,7 @@ const Main = () => {
                 width={24}
               />
               <span className="player-box__member">임영훈</span>
-            </div> */}
+            </div>
 
             {/* <span className="player-box__member blur">No Show 안주영</span> */}
           </div>
