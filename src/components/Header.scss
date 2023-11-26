@@ -6,4 +6,9 @@
   background: #292929;
   display: flex;
   justify-content: center;
+  .header__container {
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 40px;
+  }
 }

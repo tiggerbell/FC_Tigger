@@ -6,7 +6,9 @@ import Main from "../Page/Main";
 const Header = () => {
   return (
     <>
-      <div className="header"></div>
+      <div className="header">
+        <div className="header__container"></div>
+      </div>
 
       <Router>
         <Routes>

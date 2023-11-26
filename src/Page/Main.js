@@ -1,9 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../style/Main.scss";
 import assist from "../assets/images/assist.svg";
 import goal from "../assets/images/goal.svg";
+import html2canvas from "html2canvas";
 
 const Main = () => {
+  const handleDownloadScreenshot = () => {
+    const container = document.querySelector(".score_container");
+
+    html2canvas(container).then((canvas) => {
+      // 스크린샷을 Canvas로 생성한 후 다운로드합니다.
+      const link = document.createElement("a");
+      link.href = canvas.toDataURL("image/png");
+      link.download = "screenshot.png";
+      link.click();
+    });
+  };
+
   const [homeTotalGoal, setHomeTotalGoal] = useState(0);
   const [homeTotalAssist, setHomeTotalAssist] = useState(0);
 
@@ -314,6 +327,7 @@ const Main = () => {
           </div>
           <div className="third-dan__away"></div>
         </div>
+        <button onClick={handleDownloadScreenshot}>스크린샷 다운로드</button>
       </div>
     </div>
   );
