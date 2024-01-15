@@ -21,18 +21,18 @@ const Main = () => {
   const [homeTotalAssist, setHomeTotalAssist] = useState(0);
 
   // 배열 첫번째 골, 두번째 어시
-  const homePlayer1 = [1, 0]; // 고동혁
-  const homePlayer2 = [2, 1]; // 김수겸
-  const homePlayer3 = [3, 2]; // 김민규
+  const homePlayer1 = [0, 0]; // 고동혁
+  const homePlayer2 = [0, 0]; // 김수겸
+  const homePlayer3 = [0, 0]; // 김민규
   const homePlayer4 = [0, 0]; // 김원형
   const homePlayer5 = [0, 0]; // 김종찬
-  const homePlayer6 = [4, 0]; // 민경준
+  const homePlayer6 = [0, 0]; // 민경준
   const homePlayer7 = [0, 0]; // 나상우
   const homePlayer8 = [0, 0]; // 박남주
   const homePlayer9 = [0, 0]; // 박한규
   const homePlayer10 = [0, 0]; // 안주영
   const homePlayer11 = [0, 0]; // 이병찬
-  const homePlayer12 = [0, 0]; // 임영훈
+  const homePlayer12 = [1, 0]; // 임영훈
 
   // 홈 팀 골 합
   useEffect(() => {
@@ -82,16 +82,16 @@ const Main = () => {
           <div className="first-dan__center">
             <div className="center__score-box">
               {/* 스코어 수정 */}
-              <span className="score-box__home-score">4</span>
-              <span className="score-box__away-score">1</span>
+              <span className="score-box__home-score">0</span>
+              <span className="score-box__away-score">5</span>
             </div>
             {/* 날짜 구장 수정 */}
-            <h1 className="center__date">10.29 08:00</h1>
-            <h2 className="center__place">안양천 신정교 하부 2풋살장</h2>
+            <h1 className="center__date">12.17 11:00</h1>
+            <h2 className="center__place">용산 아이파크몰 풋살장 7구장</h2>
           </div>
           <div className="first-dan__right">
             {/* away 이름 수정 */}
-            <span className="left__team-name">힐킥</span>
+            <span className="left__team-name">FC ORIENTAL</span>
           </div>
         </div>
         {/* 2열 참가 인원 정보 */}
@@ -223,7 +223,7 @@ const Main = () => {
               <span className="player-box__member">나상우</span>
             </div>
 
-            <div className="home__player-box">
+            {/* <div className="home__player-box">
               <span className="player-box__text">{homePlayer8[0]}</span>
               <img
                 className="player-box__goal"
@@ -239,7 +239,7 @@ const Main = () => {
                 width={24}
               />
               <span className="player-box__member">박남주</span>
-            </div>
+            </div> */}
 
             {/* <div className="home__player-box">
               <span className="player-box__text">{homePlayer9[0]}</span>
@@ -327,7 +327,7 @@ const Main = () => {
           </div>
           <div className="third-dan__away"></div>
         </div>
-        <button onClick={handleDownloadScreenshot}>스크린샷 다운로드</button>
+        {/*<button onClick={handleDownloadScreenshot}>스크린샷 다운로드</button>*/}
       </div>
     </div>
   );
