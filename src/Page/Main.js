@@ -86,12 +86,12 @@ const Main = () => {
               <span className="score-box__away-score">7</span>
             </div>
             {/* 날짜 구장 수정 */}
-            <h1 className="center__date">02.18 16:00</h1>
-            <h2 className="center__place">용산 아이파크몰 6구장</h2>
+            <h1 className="center__date">03.09 12:00</h1>
+            <h2 className="center__place">고척</h2>
           </div>
           <div className="first-dan__right">
             {/* away 이름 수정 */}
-            <span className="left__team-name">GG 풋볼</span>
+            <span className="left__team-name">아파 FC</span>
           </div>
         </div>
         {/* 2열 참가 인원 정보 */}
@@ -204,7 +204,7 @@ const Main = () => {
               />
               <span className="player-box__member">민경준</span>
             </div> */}
-            
+
             <div className="home__player-box">
               <span className="player-box__text">{homePlayer7[0]}</span>
               <img
