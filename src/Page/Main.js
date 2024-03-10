@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../style/Main.scss";
+import "../style/Main.css";
 import assist from "../assets/images/assist.svg";
 import goal from "../assets/images/goal.svg";
 import html2canvas from "html2canvas";
@@ -21,17 +21,17 @@ const Main = () => {
   const [homeTotalAssist, setHomeTotalAssist] = useState(0);
 
   // 배열 첫번째 골, 두번째 어시
-  const homePlayer1 = [1, 0]; // 고동혁
+  const homePlayer1 = [4, 0]; // 고동혁
   const homePlayer2 = [0, 0]; // 김수겸
   const homePlayer3 = [0, 0]; // 김민규
-  const homePlayer4 = [0, 0]; // 김원형
-  const homePlayer5 = [1, 2]; // 김종찬
+  const homePlayer4 = [4, 1]; // 김원형
+  const homePlayer5 = [2, 3]; // 김종찬
   const homePlayer6 = [0, 0]; // 민경준
-  const homePlayer7 = [1, 0]; // 나상우
-  const homePlayer8 = [1, 0]; // 박남주
+  const homePlayer7 = [0, 0]; // 나상우
+  const homePlayer8 = [0, 0]; // 박남주
   const homePlayer9 = [0, 0]; // 박한규
-  const homePlayer10 = [1, 1]; // 안주영
-  const homePlayer11 = [2, 1]; // 이병찬
+  const homePlayer10 = [0, 3]; // 안주영
+  const homePlayer11 = [4, 2]; // 이병찬
   const homePlayer12 = [0, 0]; // 임영훈
 
   // 홈 팀 골 합
@@ -82,12 +82,12 @@ const Main = () => {
           <div className="first-dan__center">
             <div className="center__score-box">
               {/* 스코어 수정 */}
-              <span className="score-box__home-score">1</span>
-              <span className="score-box__away-score">7</span>
+              <span className="score-box__home-score">2</span>
+              <span className="score-box__away-score">3</span>
             </div>
             {/* 날짜 구장 수정 */}
-            <h1 className="center__date">03.09 12:00</h1>
-            <h2 className="center__place">고척</h2>
+            <h1 className="center__date">03.10 12:00</h1>
+            <h2 className="center__place">구로 고척스카이돔 풋살장 2구장</h2>
           </div>
           <div className="first-dan__right">
             {/* away 이름 수정 */}
@@ -151,7 +151,7 @@ const Main = () => {
               <span className="player-box__member">김민규</span>
             </div> */}
 
-            {/* <div className="home__player-box">
+            <div className="home__player-box">
               <span className="player-box__text">{homePlayer4[0]}</span>
               <img
                 className="player-box__goal"
@@ -167,7 +167,7 @@ const Main = () => {
                 width={24}
               />
               <span className="player-box__member">김원형</span>
-            </div> */}
+            </div>
 
             <div className="home__player-box">
               <span className="player-box__text">{homePlayer5[0]}</span>
@@ -205,7 +205,7 @@ const Main = () => {
               <span className="player-box__member">민경준</span>
             </div> */}
 
-            <div className="home__player-box">
+            {/* <div className="home__player-box">
               <span className="player-box__text">{homePlayer7[0]}</span>
               <img
                 className="player-box__goal"
@@ -221,9 +221,9 @@ const Main = () => {
                 width={24}
               />
               <span className="player-box__member">나상우</span>
-            </div>
+            </div> */}
 
-            <div className="home__player-box">
+            {/* <div className="home__player-box">
               <span className="player-box__text">{homePlayer8[0]}</span>
               <img
                 className="player-box__goal"
@@ -239,7 +239,7 @@ const Main = () => {
                 width={24}
               />
               <span className="player-box__member">박남주</span>
-            </div>
+            </div> */}
 
             {/* <div className="home__player-box">
               <span className="player-box__text">{homePlayer9[0]}</span>
