@@ -71,6 +71,7 @@ const Main = () => {
     setHomeTotalAssist(homeAssistSum);
   }, []);
   // 커밋용
+  // 커밋용1
 
   return (
     <div className="main">
