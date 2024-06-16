@@ -96,6 +96,24 @@
   justify-content: end;
 }
 
+.secon-dan__away {
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.away__player-box {
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: start;
+  font-size: 24px;
+  margin-right: 4px;
+  line-height: 1;
+  height: 32.5px;
+}
+
 .score_container
   .container__secon-dan
   .secon-dan__home

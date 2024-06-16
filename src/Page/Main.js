@@ -21,18 +21,18 @@ const Main = () => {
   const [homeTotalAssist, setHomeTotalAssist] = useState(0);
 
   // 배열 첫번째 골, 두번째 어시
-  const homePlayer1 = [1, 2]; // 고동혁
+  const homePlayer1 = [0, 0]; // 고동혁
   const homePlayer2 = [0, 0]; // 김수겸
   const homePlayer3 = [0, 0]; // 김민규
   const homePlayer4 = [0, 0]; // 김원형
-  const homePlayer5 = [1, 0]; // 김종찬
+  const homePlayer5 = [0, 3]; // 김종찬
   const homePlayer6 = [0, 0]; // 민경준
-  const homePlayer7 = [3, 0]; // 나상우
-  const homePlayer8 = [1, 2]; // 박남주
+  const homePlayer7 = [0, 2]; // 나상우
+  const homePlayer8 = [4, 1]; // 박남주
   const homePlayer9 = [0, 0]; // 박한규
-  const homePlayer10 = [1, 1]; // 안주영
-  const homePlayer11 = [0, 0]; // 이병찬
-  const homePlayer12 = [0, 1]; // 임영훈
+  const homePlayer10 = [2, 1]; // 안주영
+  const homePlayer11 = [1, 0]; // 이병찬
+  const homePlayer12 = [5, 0]; // 임영훈
 
   // 홈 팀 골 합
   useEffect(() => {
@@ -85,15 +85,15 @@ const Main = () => {
             <div className="center__score-box">
               {/* 스코어 수정 */}
               <span className="score-box__home-score">4</span>
-              <span className="score-box__away-score">3</span>
+              <span className="score-box__away-score">2</span>
             </div>
             {/* 날짜 구장 수정 */}
-            <h1 className="center__date">05.24 20:00</h1>
-            <h2 className="center__place">성내유수지 풋살장</h2>
+            <h1 className="center__date">06.16 09:00</h1>
+            <h2 className="center__place">용산 더 베이스 3구장</h2>
           </div>
           <div className="first-dan__right">
             {/* away 이름 수정 */}
-            <span className="left__team-name">DMFC</span>
+            <span className="left__team-name">FC 한세</span>
           </div>
         </div>
         {/* 2열 참가 인원 정보 */}
@@ -279,7 +279,7 @@ const Main = () => {
               <span className="player-box__member">안주영</span>
             </div>
 
-            {/* <div className="home__player-box">
+            <div className="home__player-box">
               <span className="player-box__text">{homePlayer11[0]}</span>
               <img
                 className="player-box__goal"
@@ -294,8 +294,8 @@ const Main = () => {
                 alt="icon"
                 width={24}
               />
-              <span className="player-box__member">이병찬</span>
-            </div> */}
+              <span className="player-box__member">이준민</span>
+            </div>
 
             <div className="home__player-box">
               <span className="player-box__text">{homePlayer12[0]}</span>
@@ -312,12 +312,21 @@ const Main = () => {
                 alt="icon"
                 width={24}
               />
-              <span className="player-box__member">오승준</span>
+              <span className="player-box__member">임영훈</span>
             </div>
 
             {/* <span className="player-box__member blur">No Show [노쇼네임]</span> */}
           </div>
-          <div className="secon-dan__away"></div>
+          <div className="secon-dan__away">
+            <div className="away__player-box">이명서</div>
+            <div className="away__player-box">양찬재</div>
+            <div className="away__player-box">박정환</div>
+            <div className="away__player-box">김강회</div>
+            <div className="away__player-box">남경완</div>
+            <div className="away__player-box">박기태</div>
+            <div className="away__player-box">임경현</div>
+            <div className="away__player-box">황창인</div>
+          </div>
         </div>
         {/* 3열 총 득점, 어시스트 정보 */}
         <div className="container__third-dan">
