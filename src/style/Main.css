@@ -1,0 +1,200 @@
+.main {
+  width: 100%;
+  background-color: gray;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.score_container {
+  width: 1080px;
+  height: 566px;
+  background-image: linear-gradient(270deg, #6856e9, #a839fd, #da315a);
+}
+
+.score_container .container__first-dan {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  align-items: center;
+  background-image: url(https://ssl.pstatic.net/static/sports/2023/m/08/18/hangzhou_scoreboard_bg.png);
+}
+
+.score_container .container__first-dan .first-dan__left,
+.score_container .container__first-dan .first-dan__right {
+  width: 360px;
+  text-align: center;
+}
+
+.score_container .container__first-dan .first-dan__left .left__team-name,
+.score_container .container__first-dan .first-dan__right .left__team-name {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.score_container .container__first-dan .first-dan__center {
+  width: 360px;
+}
+
+.score_container .container__first-dan .first-dan__center .center__score-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.score_container
+  .container__first-dan
+  .first-dan__center
+  .center__score-box
+  .score-box__home-score,
+.score_container
+  .container__first-dan
+  .first-dan__center
+  .center__score-box
+  .score-box__away-score {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.score_container .container__first-dan .first-dan__center .center__date {
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.score_container .container__first-dan .first-dan__center .center__place {
+  text-align: center;
+  font-size: 18px;
+  color: #ffbde5;
+}
+
+.score_container .container__secon-dan {
+  display: flex;
+}
+
+.score_container .container__secon-dan .secon-dan__home:first-child {
+  border-right: 3px solid rgba(0, 0, 0, 0.08);
+  flex-direction: column;
+  text-align: right;
+  padding: 7px;
+}
+
+.score_container .container__secon-dan .secon-dan__home,
+.score_container .container__secon-dan .secon-dan__away {
+  width: 540px;
+  height: 331px;
+  display: flex;
+}
+
+.score_container .container__secon-dan .secon-dan__home .home__player-box,
+.score_container .container__secon-dan .secon-dan__away .home__player-box {
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: end;
+}
+
+.secon-dan__away {
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.away__player-box {
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: start;
+  font-size: 24px;
+  margin-right: 4px;
+  line-height: 1;
+  height: 32.5px;
+}
+
+.score_container
+  .container__secon-dan
+  .secon-dan__home
+  .home__player-box
+  .player-box__member,
+.score_container
+  .container__secon-dan
+  .secon-dan__away
+  .home__player-box
+  .player-box__member {
+  font-size: 24px;
+}
+
+.score_container
+  .container__secon-dan
+  .secon-dan__home
+  .home__player-box
+  .player-box__text,
+.score_container
+  .container__secon-dan
+  .secon-dan__away
+  .home__player-box
+  .player-box__text {
+  font-size: 20px;
+  margin-right: 4px;
+  line-height: 1;
+}
+
+.score_container
+  .container__secon-dan
+  .secon-dan__home
+  .home__player-box
+  .player-box__assist,
+.score_container
+  .container__secon-dan
+  .secon-dan__away
+  .home__player-box
+  .player-box__goal,
+.score_container
+  .container__secon-dan
+  .secon-dan__home
+  .home__player-box
+  .player-box__goal,
+.score_container
+  .container__secon-dan
+  .secon-dan__away
+  .home__player-box
+  .player-box__assist {
+  margin-right: 4px;
+}
+
+.score_container .container__secon-dan .secon-dan__home .blur,
+.score_container .container__secon-dan .secon-dan__away .blur {
+  opacity: 0.5;
+}
+
+.score_container .container__third-dan {
+  border-top: 3px solid rgba(0, 0, 0, 0.08);
+}
+
+.score_container .container__third-dan .third-dan__home:first-child {
+  height: 32px;
+  border-right: 3px solid rgba(0, 0, 0, 0.08);
+}
+
+.score_container .container__third-dan .third-dan__home,
+.score_container .container__third-dan .third-dan__away {
+  width: 540px;
+  display: flex;
+  justify-content: end;
+}
+
+.score_container .container__third-dan .third-dan__home .score-text,
+.score_container .container__third-dan .third-dan__away .score-text {
+  font-size: 20px;
+  margin-right: 4px;
+}
+
+.score_container .container__third-dan .third-dan__home .team-assist,
+.score_container .container__third-dan .third-dan__away .team-goal,
+.score_container .container__third-dan .third-dan__home .team-goal,
+.score_container .container__third-dan .third-dan__away .team-assist {
+  margin-right: 4px;
+}
