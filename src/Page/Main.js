@@ -21,18 +21,18 @@ const Main = () => {
   const [homeTotalAssist, setHomeTotalAssist] = useState(0);
 
   // 배열 첫번째 골, 두번째 어시
-  const homePlayer1 = [1, 0]; // 고동혁
+  const homePlayer1 = [1, 1]; // 고동혁
   const homePlayer2 = [0, 0]; // 김수겸
   const homePlayer3 = [0, 0]; // 김민규
   const homePlayer4 = [0, 0]; // 김원형
-  const homePlayer5 = [0, 0]; // 김종찬
+  const homePlayer5 = [0, 2]; // 김종찬
   const homePlayer6 = [0, 0]; // 민경준
-  const homePlayer7 = [3, 1]; // 나상우
-  const homePlayer8 = [0, 0]; // 박남주
+  const homePlayer7 = [3, 0]; // 나상우
+  const homePlayer8 = [2, 2]; // 박남주
   const homePlayer9 = [0, 0]; // 박한규
   const homePlayer10 = [0, 2]; // 안주영
-  const homePlayer11 = [0, 0]; // 이병찬
-  const homePlayer12 = [2, 1]; // 임영훈
+  const homePlayer11 = [0, 3]; // 이병찬
+  const homePlayer12 = [5, 0]; // 임영훈
   //커밋
 
   // 홈 팀 골 합
@@ -85,16 +85,16 @@ const Main = () => {
           <div className="first-dan__center">
             <div className="center__score-box">
               {/* 스코어 수정 */}
-              <span className="score-box__home-score">1</span>
+              <span className="score-box__home-score">3</span>
               <span className="score-box__away-score">3</span>
             </div>
             {/* 날짜 구장 수정 */}
-            <h1 className="center__date">07.13 11:00</h1>
-            <h2 className="center__place">마루공원 풋살장</h2>
+            <h1 className="center__date">08.17 22:00</h1>
+            <h2 className="center__place">용산 아이파크 풋살장</h2>
           </div>
           <div className="first-dan__right">
             {/* away 이름 수정 */}
-            <span className="left__team-name">월렌스</span>
+            <span className="left__team-name">FC SS</span>
           </div>
         </div>
         {/* 2열 참가 인원 정보 */}
