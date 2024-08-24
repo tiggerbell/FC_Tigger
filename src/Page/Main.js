@@ -24,15 +24,15 @@ const Main = () => {
   const homePlayer1 = [0, 0]; // 고동혁
   const homePlayer2 = [0, 0]; // 김수겸
   const homePlayer3 = [0, 0]; // 김민규
-  const homePlayer4 = [0, 0]; // 김원형
-  const homePlayer5 = [0, 0]; // 김종찬
+  const homePlayer4 = [2, 0]; // 김원형
+  const homePlayer5 = [1, 1]; // 김종찬
   const homePlayer6 = [0, 0]; // 민경준
   const homePlayer7 = [0, 0]; // 나상우
-  const homePlayer8 = [0, 0]; // 박남주
+  const homePlayer8 = [0, 1]; // 박남주
   const homePlayer9 = [0, 0]; // 박한규
-  const homePlayer10 = [0, 0]; // 안주영
-  const homePlayer11 = [0, 0]; // 이병찬
-  const homePlayer12 = [0, 0]; // 임영훈
+  const homePlayer10 = [2, 3]; // 안주영
+  const homePlayer11 = [1, 0]; // 이병찬
+  const homePlayer12 = [3, 2]; // 임영훈
   //커밋
 
   // 홈 팀 골 합
@@ -85,8 +85,8 @@ const Main = () => {
           <div className="first-dan__center">
             <div className="center__score-box">
               {/* 스코어 수정 */}
-              <span className="score-box__home-score">3</span>
-              <span className="score-box__away-score">3</span>
+              <span className="score-box__home-score">2</span>
+              <span className="score-box__away-score">5</span>
             </div>
             {/* 날짜 구장 수정 */}
             <h1 className="center__date">08.24 08:00</h1>
